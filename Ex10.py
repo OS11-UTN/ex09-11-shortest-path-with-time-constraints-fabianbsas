@@ -62,7 +62,7 @@ lambdas = numpy.arange(initial_value, end_value, delta)
 
 lagranges = []
 for idx in range(len(lambdas)):
-    distance_vector_sub_lambda = distance_vector + lambdas[idx] * maximum_time_available
+    distance_vector_sub_lambda = distance_vector + lambdas[idx] * time_vector
     result = linprog(c=distance_vector_sub_lambda, 
                      A_eq=matrix_node_arch, 
                      b_eq=beq, 

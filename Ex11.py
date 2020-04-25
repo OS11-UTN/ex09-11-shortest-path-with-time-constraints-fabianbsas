@@ -59,7 +59,7 @@ gradients =[]
 functions = []
 iterations = []
 while diff > tolerance:
-    distance_vector_sub_lambda = distance_vector + _lambda * maximum_time_available
+    distance_vector_sub_lambda = distance_vector + _lambda * time_vector
     result = linprog(c=distance_vector_sub_lambda, 
                      A_eq=matrix_node_arch, 
                      b_eq=beq, 
